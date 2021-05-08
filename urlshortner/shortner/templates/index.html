@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urlshortner</title>
+    <link rel="stylesheet" href="{% static 'index.css'%}">
+</head>
+<body>
+    <h1 style="text-align: center;">Urlshortner</h1>
+    <div class="url-box">
+        <span class="url">
+            <form id="post-form">
+                {% csrf_token %}
+                <label for="fname">Url:</label>
+                <input type="text" id="fname" name="fname">
+                <input type="submit" value="Submit">
+            </form>
+        </span>
+    </div>
+    <script type="text/javascript">
+        $(document).on('submit', '#post-form', function(e){
+            e.preventDefault(); 
+        })
+    </script>
+</body>
+</html>

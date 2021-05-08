@@ -1,0 +1,8 @@
+.url-box{
+  text-align: center;
+}
+.url{
+  border: 2px solid gold;
+  border-radius: 5px;
+  padding: 20px;
+}
